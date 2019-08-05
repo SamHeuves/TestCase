@@ -7,7 +7,7 @@
 
   <link rel="stylesheet" href="style.min.css">
 
-  <script src="script.js"></script>
+  <script src="script.min.js"></script>
 
   <title>Testcase sketch</title>
 
