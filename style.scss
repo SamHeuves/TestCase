@@ -1,0 +1,279 @@
+// Variabelen
+$main-font: Roboto;
+$primary-color: #ffd508;
+$secondary-color: #ffa02f;
+$link-color: #fff;
+$text-color: #000;
+
+// Classes
+
+// Essentials
+
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+body {
+  font-family: $main-font;
+  background-color: #f2f7f7;
+}
+
+#pagewrap {
+  width: 920px;
+  margin: 0px auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 10px 0px 10px 0px;
+}
+
+// Button
+
+.button {
+  width: 50%;
+  background-color: $secondary-color;
+  border-radius: 5px;
+  color: $link-color;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid $secondary-color;
+  min-height: 20px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-color;
+  }
+
+}
+
+// Styling text
+
+h1 {
+  font-size: 20px;
+  color: $text-color;
+}
+
+p {
+  font-size: 16px;
+}
+
+// Styling links
+
+a:link,
+a:visited {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+// Navigation
+
+#navBar {
+  height: 50px;
+  background-image: linear-gradient(to right, $primary-color, $secondary-color);
+  color: $link-color;
+  font-weight: bold;
+  text-align: center;
+
+  .item {
+    cursor: pointer;
+    font-size: 16px;
+    float: left;
+    margin: 2%;
+  }
+
+  .logo {
+    float: left;
+    font-size: 20px;
+    margin: 15px;
+  }
+}
+
+// Cards
+
+#cardBoxes {
+  width: 100%;
+  margin-top: 30px;
+  column-count: 2;
+  column-gap: 30px;
+
+  .card {
+    background-color: $link-color;
+    float: left;
+    border: 1px solid #dbdad5;
+    border-radius: 5px;
+
+  .content {
+      padding: 15px;
+    }
+  }
+
+  .card img {
+    max-width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}
+
+
+
+// SearchBox
+
+#searchBox {
+  background-color: $link-color;
+  border: 1px solid #dbdad5;
+  border-radius: 5px;
+  margin: 30px 0px 30px 0px;
+  text-align: center;
+  column-count: 1;
+  padding: 15px;
+
+  p {
+    margin-bottom: 30px;
+  }
+
+}
+
+
+#searchBarContainer {
+  column-count: 2;
+  column-gap: 0;
+
+  .button {
+    float: left;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    text-decoration: none;
+    width: 50%;
+  }
+
+  input[type="text"] {
+    font-size: 16px;
+    padding: 10px 0 10px 10px;
+    border: 1px solid #dbdad5;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    min-height: 20px;
+    width: 50%;
+    float: right;
+    outline-color: $secondary-color;
+  }
+
+}
+
+// Classes for Javascript
+
+#loader {
+  margin: 10px auto -34px auto;
+  display: none;
+}
+
+.searched {
+  animation: fadeOut 500ms linear;
+  animation-iteration-count: 1;
+  display: none;
+}
+
+.loader-start {
+  display: block;
+  -webkit-animation: spin 4s linear;
+  -moz-animation: spin 4s linear;
+  animation: spin 4s linear;
+}
+
+#beforeButton {
+  display: none;
+}
+
+.afterButton {
+  display: block;
+  padding: 20px;
+}
+
+#list {
+  display: none;
+}
+
+// Keyframes for animations
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+    display: block;
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    display: block;
+
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    display: block;
+  }
+}
+
+// Mediaqueries for screen smaller than 576px
+
+@media only screen and (max-width: 576px) {
+  #pagewrap {
+    width: 90%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  #navBar {
+  
+  .item {
+    display: none;
+  }
+
+  }
+
+  .show-list {
+    width: 50%;
+  }
+
+  #cardBoxes {
+    column-count: 1;
+
+    .card {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  #searchBox {
+    margin: 0;
+
+    p {
+      padding: 0 10px 0 10px;
+    }
+
+    input::placeholder {
+      font-size: 10px;
+    }
+  }
+}
+
+
+
+// End 
